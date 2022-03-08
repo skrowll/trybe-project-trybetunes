@@ -61,12 +61,6 @@ class Login extends React.Component {
                 >
                   Entrar
                 </button>
-                <button
-                  type="button"
-                  onClick={ this.handleClick2 }
-                >
-                  Teste
-                </button>
               </form>
             </div>
           )}
