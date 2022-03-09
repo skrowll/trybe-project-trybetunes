@@ -5,6 +5,7 @@ class MusicCard extends React.Component {
   render() {
     const { trackName } = this.props;
     const { previewUrl } = this.props;
+    const { trackId } = this.props;
     return (
       <div data-testid="page-album">
         <p>{trackName}</p>
@@ -13,6 +14,14 @@ class MusicCard extends React.Component {
           O seu navegador não suporta o elemento
           <code>audio</code>
         </audio>
+        <label htmlFor="favorite">
+          <input
+            type="checkbox"
+            name="favorite"
+            data-testid={ `checkbox-music-${trackId}` }
+          />
+          Favorita
+        </label>
       </div>
     );
   }
@@ -21,6 +30,7 @@ class MusicCard extends React.Component {
 MusicCard.propTypes = {
   trackName: PropTypes.string.isRequired,
   previewUrl: PropTypes.string.isRequired,
+  trackId: PropTypes.number.isRequired,
 };
 
 export default MusicCard;
