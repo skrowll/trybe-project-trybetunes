@@ -54,7 +54,7 @@ class Search extends React.Component {
       this.setState({ returnText: `Resultado de álbuns de: ${artist}` });
       this.setState({
         cards: (
-          <div className="card-display">
+          <div>
             {albums.map((album) => (
               <Link
                 key={ album.collectionId }
@@ -63,6 +63,7 @@ class Search extends React.Component {
               >
                 <img src={ album.artworkUrl100 } alt={ album.collectionName } />
                 <p>{album.collectionName}</p>
+                <p>{album.artistName}</p>
               </Link>
             ))}
           </div>
