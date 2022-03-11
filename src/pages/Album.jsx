@@ -27,7 +27,7 @@ class Album extends React.Component {
     const response = await getMusics(id);
     this.setState({ tracks: response });
     this.getInfos();
-    console.log(response[1]);
+    // console.log(response[1]);
   }
 
   getInfos() {
@@ -63,6 +63,7 @@ class Album extends React.Component {
                 trackId={ track.trackId }
                 trackName={ track.trackName }
                 previewUrl={ track.previewUrl }
+                track={ track }
               />
             ))
           )
