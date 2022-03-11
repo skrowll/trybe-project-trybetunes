@@ -22,17 +22,13 @@ class MusicCard extends React.Component {
     this.checkFavorite();
   }
 
-  async componentDidUpdate() {
+  async handleChange({ target }) {
+    const { value } = target;
+    this.setState({ loading: true });
+    await addSong(value);
     await this.setFavoritesState();
     this.checkFavorite();
-  }
-
-  async handleChange({ target }) {
-    this.setState({ loading: true });
-    const { value } = target;
-    await addSong(value);
     this.setState({ loading: false });
-    this.setFavoritesState();
   }
 
   async setFavoritesState() {
