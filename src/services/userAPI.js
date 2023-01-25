@@ -25,10 +25,9 @@ export const getUser = () => new Promise((resolve) => {
 
 export const createUser = (user) => new Promise((resolve) => {
   const emptyUser = {
-    name: '',
+    username: '',
     email: '',
-    image: '',
-    description: '',
+    password: '',
   };
   saveUser({ ...emptyUser, ...user });
   simulateRequest(SUCCESS_STATUS)(resolve);
