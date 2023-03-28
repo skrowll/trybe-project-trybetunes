@@ -12,6 +12,12 @@ code {
     monospace;
 }
 
+#root {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
 .loading {
   align-items: center;
   display: flex;
