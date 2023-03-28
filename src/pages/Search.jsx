@@ -92,7 +92,7 @@ class Search extends React.Component {
           ? <Loading />
           : (
             <div>
-              <form>
+              <form autoComplete="off">
                 <label htmlFor="artist">
                   <input
                     type="text"

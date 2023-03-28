@@ -43,7 +43,7 @@ class Login extends React.Component {
           : (
             <div>
               <p>Login</p>
-              <form>
+              <form autoComplete="off">
                 <label htmlFor="name">
                   <input
                     type="text"
